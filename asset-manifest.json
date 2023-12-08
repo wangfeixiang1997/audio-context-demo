@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/audio-context-demo/static/css/main.9761a7a7.css",
+    "main.js": "/audio-context-demo/static/js/main.7e2f43e9.js",
+    "static/js/787.b9027441.chunk.js": "/audio-context-demo/static/js/787.b9027441.chunk.js",
+    "static/media/demo.mp3": "/audio-context-demo/static/media/demo.cceecdd602c5304189d7.mp3",
+    "index.html": "/audio-context-demo/index.html",
+    "main.9761a7a7.css.map": "/audio-context-demo/static/css/main.9761a7a7.css.map",
+    "main.7e2f43e9.js.map": "/audio-context-demo/static/js/main.7e2f43e9.js.map",
+    "787.b9027441.chunk.js.map": "/audio-context-demo/static/js/787.b9027441.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9761a7a7.css",
+    "static/js/main.7e2f43e9.js"
+  ]
+}

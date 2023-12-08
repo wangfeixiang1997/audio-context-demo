@@ -139,31 +139,47 @@ const App = () => {
   }
 
   return (
-    <div>
-      <audio ref={getAudioRef} crossOrigin="anonymous" id="audio" src={mp3}></audio>
-      <canvas width={300} height={10} ref={getCanvasRef} id="canvas"></canvas>
-      <div>
-        <input
-          onChange={(e) => { inputRangeChange(e.target.value) }}
-          type="range"
-          id="volume"
-          min="-12"
-          max="12"
-          value={volumeChangeValue}
-          step="1"
-          list="tickmarks"
-        />
-        <datalist id="tickmarks">
-          <option value="-12" label="-12"></option>
-          <option value="-6" label="-6"></option>
-          <option value="0" label="0"></option>
-          <option value="6" label="6"></option>
-          <option value="12" label="12"></option>
-        </datalist>
+    <div style={{
+      width: '100vw',
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}
+      >
+        <audio ref={getAudioRef} crossOrigin="anonymous" id="audio" src={mp3}></audio>
+        <canvas width={300} height={10} ref={getCanvasRef} id="canvas"></canvas>
+        <div style={{ marginTop: '30px' }}>
+          <input
+            onChange={(e) => { inputRangeChange(e.target.value) }}
+            type="range"
+            id="volume"
+            min="-12"
+            max="12"
+            value={volumeChangeValue}
+            step="1"
+            list="tickmarks"
+          />
+          <datalist id="tickmarks">
+            <option value="-12" label="-12"></option>
+            <option value="-6" label="-6"></option>
+            <option value="0" label="0"></option>
+            <option value="6" label="6"></option>
+            <option value="12" label="12"></option>
+          </datalist>
+        </div>
+        <div style={{ marginTop: '30px' }}>
+          <button style={{ cursor: 'pointer' }} onClick={handleClickPlay}>播放</button>
+          <button style={{ cursor: 'pointer', marginLeft: '20px' }} onClick={stopCanvas}>停止</button>
+        </div>
+        <div style={{ marginTop: '30px' }}>请先点击播放按钮</div>
       </div>
-
-      <button style={{ cursor: 'pointer' }} onClick={handleClickPlay}>播放</button>
-      <button style={{ cursor: 'pointer' }} onClick={stopCanvas}>停止</button>
     </div>
   );
 }

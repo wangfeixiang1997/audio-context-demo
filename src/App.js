@@ -12,6 +12,7 @@ const DROP_DISTANCE = 1;
 const App = () => {
   const getAudioRef = useRef();
   const getCanvasRef = useRef();
+  const getAudioCanvasRef = useRef();
   const audioCtxRef = useRef();
   const analyserRef = useRef();
   const requestAnimateFrameIdRef = useRef();
@@ -22,8 +23,7 @@ const App = () => {
     audioCtxRef.current = new (window.AudioContext || window.AudioContext)();
     analyserRef.current = audioCtxRef.current.createAnalyser();
     await getAudioRef.current.play();
-    const stream = getAudioRef.current.captureStream();
-    const source = audioCtxRef.current.createMediaStreamSource(stream);
+    const source = audioCtxRef.current.createMediaElementSource(getAudioRef.current);
     //连接到你的声源
     source.connect(analyserRef.current);
     // 获取音频数据点
@@ -155,6 +155,7 @@ const App = () => {
       >
         <audio ref={getAudioRef} crossOrigin="anonymous" id="audio" src={mp3}></audio>
         <canvas width={300} height={10} ref={getCanvasRef} id="canvas"></canvas>
+        <canvas width={300} height={10} ref={getAudioCanvasRef}></canvas>
         <div style={{ marginTop: '30px' }}>
           <input
             onChange={(e) => { inputRangeChange(e.target.value) }}

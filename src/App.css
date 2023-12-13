@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -52,30 +53,33 @@ input[type="range"] {
   margin: 0;
 }
 
-[type="range"] {
-  -webkit-appearance: none;
+input[type="range"] {
   appearance: none;
+  -webkit-appearance: none;
   margin: 0;
   outline: 0;
   background-color: transparent;
-  width: 500px;
+  width: 200px;
 }
-[type="range"]::-webkit-slider-runnable-track {
+
+input[type="range"]::-webkit-slider-runnable-track {
   height: 4px;
   background: #eee;
 }
-[type="range" i]::-webkit-slider-container {
+
+input[type="range" i]::-webkit-slider-container {
   height: 20px;
   overflow: hidden;
 }
-[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+
+input[type="range"]::-webkit-slider-thumb {
   appearance: none;
+  -webkit-appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #1a2f5d;
   border: 1px solid transparent;
   margin-top: -8px;
-  border-image: linear-gradient(#1a2f5d,#1a2f5d) 0 fill / 8 20 8 0 / 0px 0px 0 2000px;
+  border-image: linear-gradient(#1a2f5d, #1a2f5d) 0 fill / 8 20 8 0 / 0px 0px 0 2000px;
 }

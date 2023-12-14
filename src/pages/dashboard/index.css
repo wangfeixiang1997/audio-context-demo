@@ -134,6 +134,7 @@
 }
 
 datalist {
+  margin-top: -10px;
   display: flex;
   justify-content: space-between;
   width: 600px;
@@ -168,18 +169,28 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range" i]::-webkit-slider-container {
-  height: 20px;
+  height: 30px;
   overflow: hidden;
 }
 
 input[type="range"]::-webkit-slider-thumb {
+  cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #1a2f5d;
   border: 1px solid transparent;
-  margin-top: -8px;
-  border-image: linear-gradient(#1a2f5d, #1a2f5d) 0 fill / 8 20 8 0 / 0px 0px 0 2000px;
+  margin-top: -6px;
+  border-image: linear-gradient(#1a2f5d, #1a2f5d) 0 fill / 6 16 6 0 / 0px 0px 0 2000px;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0px 0px 0px 4px rgba(26,47,93,0.2);
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  box-shadow: 0px 0px 0px 0px rgba(26,47,93,0.2);
+  transform: scale(1.2);
+  transition: transform 0.5s;
 }

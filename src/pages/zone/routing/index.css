@@ -1,0 +1,34 @@
+.routing-item-box {
+    margin: auto;
+    margin-top: 16px;
+    width: 768px;
+    box-shadow: 0 0 10px 3px #00000021;
+    border-radius: 8px;
+    user-select: none;
+  }
+  
+  .routing-item-title {
+    display: flex;
+    align-items: center;
+    width: 768px;
+    height: 64px;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 16px;
+    color: #133060;
+  }
+  
+  .routing-item-title span {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .routing-item-title span:nth-child(2) {
+    margin-left: 16px;
+  }
+  
+  .routing-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }

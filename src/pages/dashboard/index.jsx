@@ -59,6 +59,8 @@ const Dashboard = () => {
     if (getCanvasRef.current) {
       clearCanvas(getCanvasRef.current);
     }
+    return stopCanvas
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const createAudioContext = async () => {
@@ -100,7 +102,8 @@ const Dashboard = () => {
       // 读取当前帧新的数据
       analyserRef.current.getByteFrequencyData(dataArray);
       // 更新长度
-      const bars = dataArray.slice(0, Math.min(1, dataArray.length));
+      let bars = dataArray.slice(0, Math.min(1, dataArray.length));
+      bars = [bars[0] < 200 ? (bars[0] * 3) : bars[0]];
       setCanvasValue(bars[0])
       // 画图
       clearCanvas(canvasEl);

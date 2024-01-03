@@ -23,7 +23,7 @@ const Routing = () => {
                     <div className='routing-item-text'>Select Zone Signal source for Speaker</div>
                     <div className='radio-box'>
                         <Radio.Group onChange={(e) => { setValue(e.target.value); }} value={value}>
-                            <Space direction="vertical">
+                            <Space size={20} direction="vertical">
                                 <Radio value={1}><div className='radio-item'>Zone A</div></Radio>
                                 <Radio value={2}><div className='radio-item'>Zone B</div></Radio>
                                 <Radio value={3}><div className='radio-item'>Zone C</div></Radio>

@@ -141,7 +141,9 @@ const Equalizer = () => {
                         ondrag: function (dx, dy) {
                             onPointDragging(dataIndex, [this.x, this.y]);
                         },
-                        onmousemove: function () {
+                        onmousemove: function (e) {
+                            e = e.event || window.event
+                            e.preventDefault()
                             showTooltip(dataIndex);
                         },
                         onmouseout: function () {
